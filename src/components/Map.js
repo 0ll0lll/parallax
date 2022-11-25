@@ -64,7 +64,7 @@ const map = () => {
         if (mapBounds.top > mapContainerBounds.top) {
           newCrop.y = -40;
         } else if (mapBounds.bottom < mapContainerBounds.bottom) {
-          newCrop.y = -(mapBounds.height - mapContainerBounds.height);
+          newCrop.y = -(mapBounds.height - mapContainerBounds.height + 40);
         }
         setColor();
         setCrop(newCrop);
