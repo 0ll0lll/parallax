@@ -96,8 +96,7 @@ const map = () => {
         id="map"
         style={{
           transform: `translate(${crop.x}px, ${crop.y}px)`,
-          // backgroundColor: color,
-          transitionDuration: `${transition}s`
+          transitionDuration: isMobile ? `${transition}s` : '0.4s'
         }}
         className="relative top-10"
       >
