@@ -1,0 +1,209 @@
+.tile {
+  position: absolute;
+  border-radius: 26px;
+  border: 1px solid black;
+}
+
+.tile::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 25px;
+  /* background-color: rgb(229 231 235); */
+}
+
+.tile:hover::after {
+  /* background-color: rgba(229, 231, 235, 0); */
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+  -webkit-box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488, -7px -5px 15px 5px #8cff85,
+    12px -5px 15px 5px #80c7ff, 12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b, -10px -7px 27px 1px #8e5cff,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488, -7px -5px 15px 5px #8cff85,
+    12px -5px 15px 5px #80c7ff, 12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b, -10px -7px 27px 1px #8e5cff,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+#one {
+  top: 11.8%;
+  left: 4.7%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#two {
+  top: 5.1%;
+  left: 27.5%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#three {
+  top: 16%;
+  left: 41%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#four {
+  top: 9%;
+  left: 59%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#five {
+  top: 12.5%;
+  left: 74.4%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#six {
+  top: 5%;
+  left: 87%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#seven {
+  top: 21%;
+  left: 17%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#eight {
+  top: 29%;
+  left: 32%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#nine {
+  top: 40%;
+  left: 44%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#ten {
+  top: 33%;
+  left: 59%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#eleven {
+  top: 43%;
+  left: 71%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#twelve {
+  top: 26%;
+  left: 89%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#thirteen {
+  top: 35%;
+  left: 6%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#fourteen {
+  top: 45%;
+  left: 18%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#fifteen {
+  top: 55%;
+  left: 33%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#sixteen {
+  top: 58%;
+  left: 50%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#seventeen {
+  top: 58%;
+  left: 63%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#eighteen {
+  top: 52%;
+  left: 84%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#nineteen {
+  top: 62%;
+  left: 3%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#twenty {
+  top: 69%;
+  left: 17%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#twenty-one {
+  top: 85%;
+  left: 7%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#twenty-two {
+  top: 83%;
+  left: 30%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#twenty-three {
+  top: 77%;
+  left: 44%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#twenty-four {
+  top: 83%;
+  left: 62%;
+  height: 7.4%;
+  width: 7%;
+}
+
+#twenty-five {
+  top: 70%;
+  left: 75%;
+  height: 12%;
+  width: 4.3%;
+}
+
+#twenty-six {
+  top: 80%;
+  left: 90%;
+  height: 12%;
+  width: 4.3%;
+}

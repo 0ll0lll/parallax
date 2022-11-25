@@ -1,5 +1,12 @@
 #map {
-  height: 2250px;
-  width: 4000px;
-  background-image: url('../images/map.jpg');
+  /* height: 2250px;
+  width: 4000px; */
+  width: 200%;
+  height: 200%;
+  /* background-image: url('../images/map.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; */
+  transition-timing-function: ease-out;
+  transition-duration: 0.4s;
 }

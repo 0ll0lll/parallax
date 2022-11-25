@@ -9,7 +9,7 @@ function App() {
         </span>
       </header>
 
-      <main style={{ height: 'calc(100vh - 5rem)' }} className="bg-gray-300">
+      <main style={{ height: 'calc(100vh - 5rem)' }} className="bg-gray-200">
         <Map />
         <h1 className="fixed text-4xl font-bold -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">Alphabet</h1>
       </main>
