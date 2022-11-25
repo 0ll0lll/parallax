@@ -1,6 +1,5 @@
-import React, { useRef, useState, useMemo } from 'react';
+import React, { useRef, useState, useMemo, useEffect } from 'react';
 import { useGesture } from 'react-use-gesture';
-import { isMobile } from 'react-device-detect';
 import '../styles/map.css';
 import Tile from './Tile';
 
@@ -33,11 +32,18 @@ const map = () => {
     'y',
     'z'
   ];
+  const shuffledLetters = useMemo(() => letters.sort(() => Math.random() - 0.5), []);
   const mapContainerRef = useRef();
   const mapRef = useRef();
-  const shuffledLetters = useMemo(() => letters.sort(() => Math.random() - 0.5), []);
   const [crop, setCrop] = useState({ x: -window.innerWidth / 2, y: -window.innerHeight / 2 });
-  const [color, setColor] = useState();
+  const [transition, setTransition] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
 
   useGesture(
     {
@@ -47,7 +53,8 @@ const map = () => {
       },
       onDrag: ({ movement: [dx, dy] }) => {
         if (!isMobile) return;
-        setColor('');
+        // setColor('');
+        setTransition(0);
         setCrop((prev) => ({ ...prev, x: dx, y: dy }));
       },
       onDragEnd: () => {
@@ -57,16 +64,20 @@ const map = () => {
 
         if (mapBounds.left > mapContainerBounds.left) {
           newCrop.x = 0;
+          setTransition(0.4);
         } else if (mapBounds.right < mapContainerBounds.right) {
+          setTransition(0.4);
           newCrop.x = -(mapBounds.width - mapContainerBounds.width);
         }
 
         if (mapBounds.top > mapContainerBounds.top) {
+          setTransition(0.4);
           newCrop.y = -40;
         } else if (mapBounds.bottom < mapContainerBounds.bottom) {
+          setTransition(0.4);
           newCrop.y = -(mapBounds.height - mapContainerBounds.height + 40);
         }
-        setColor();
+
         setCrop(newCrop);
       }
     },
@@ -85,7 +96,8 @@ const map = () => {
         id="map"
         style={{
           transform: `translate(${crop.x}px, ${crop.y}px)`,
-          backgroundColor: color
+          // backgroundColor: color,
+          transitionDuration: `${transition}s`
         }}
         className="relative top-10"
       >
