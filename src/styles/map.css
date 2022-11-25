@@ -1,12 +1,17 @@
 #map {
-  /* height: 2250px;
-  width: 4000px; */
   width: 200%;
   height: 200%;
+  transition-timing-function: ease-out;
+  transition-duration: 0.4s;
+  touch-action: none;
   /* background-image: url('../images/map.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center; */
-  transition-timing-function: ease-out;
-  transition-duration: 0.4s;
+}
+
+@media only screen and (max-width: 768px) {
+  #map {
+    width: 600%;
+  }
 }

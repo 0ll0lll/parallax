@@ -10,11 +10,9 @@
   width: 100%;
   position: absolute;
   border-radius: 25px;
-  /* background-color: rgb(229 231 235); */
 }
 
 .tile:hover::after {
-  /* background-color: rgba(229, 231, 235, 0); */
   cursor: pointer;
   transition-duration: 0.4s;
 
