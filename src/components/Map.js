@@ -3,7 +3,7 @@ import { useGesture } from 'react-use-gesture';
 import '../styles/map.css';
 import Tile from './Tile';
 
-const map = () => {
+const Map = ({ isGameOn }) => {
   const letters = [
     'a',
     'b',
@@ -39,6 +39,8 @@ const map = () => {
   const [transition, setTransition] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  const [activeLetter, setActiveLetter] = useState(null);
+
   useEffect(() => {
     if (window.innerWidth < 768) {
       setIsMobile(true);
@@ -48,7 +50,7 @@ const map = () => {
   useGesture(
     {
       onMove: ({ xy }) => {
-        if (isMobile) return;
+        if (activeLetter || isMobile) return;
         setCrop({ x: -xy[0], y: -xy[1] });
       },
       onDrag: ({ movement: [dx, dy] }) => {
@@ -101,7 +103,15 @@ const map = () => {
         className="relative top-10"
       >
         {shuffledLetters.map((letter, index) => (
-          <Tile key={letter} letter={letter} index={index} />
+          <Tile
+            activeLetter={activeLetter}
+            setActiveLetter={setActiveLetter}
+            setCrop={setCrop}
+            isGameOn={isGameOn}
+            key={letter}
+            letter={letter}
+            index={index}
+          />
         ))}
 
         <p className="absolute top-0 left-0 font-bold bg-red-500"> TOP LEFT</p>
@@ -113,4 +123,4 @@ const map = () => {
   );
 };
 
-export default map;
+export default Map;
