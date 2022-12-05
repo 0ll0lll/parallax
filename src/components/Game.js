@@ -38,7 +38,7 @@ const Game = ({ isGameOn }) => {
       {letters.map((letter, index) => (
         <span
           key={letter}
-          className={`md:text-xl tracking-[.2rem] md:tracking-[.4rem] 
+          className={`md:text-xl tracking-[.2rem] md:tracking-[.4rem] uppercase
         ${letter === matchedLetters[index] ? 'text-black' : 'text-gray-400'}`}
         >
           {letter}

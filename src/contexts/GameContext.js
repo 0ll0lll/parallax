@@ -44,8 +44,9 @@ export function GameWrapper({ children }) {
 
     if (trimmedLetters[trimmedLetters.length - 1] === clickedLetters[clickedLetters.length - 1]) {
       if (tile) {
-        tile.classList.add('correct');
-        tile.innerHTML = '👍✨';
+        // tile.classList.add('correct');
+        // tile.innerHTML = '👍✨';
+        // console.log(tile);
       }
       setMatchedLetters(trimmedLetters);
     } else {

@@ -54,8 +54,7 @@ const Map = ({ isGameOn }) => {
         setCrop({ x: -xy[0], y: -xy[1] });
       },
       onDrag: ({ movement: [dx, dy] }) => {
-        if (!isMobile) return;
-        // setColor('');
+        if (activeLetter || !isMobile) return;
         setTransition(0);
         setCrop((prev) => ({ ...prev, x: dx, y: dy }));
       },
