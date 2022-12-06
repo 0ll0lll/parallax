@@ -44,6 +44,7 @@ const Map = ({ isGameOn }) => {
   useEffect(() => {
     if (window.innerWidth < 768) {
       setIsMobile(true);
+      setCrop({ x: -mapRef.current.clientWidth / 2, y: -mapRef.current.clientHeight / 2 });
     }
   }, []);
 
@@ -73,10 +74,10 @@ const Map = ({ isGameOn }) => {
 
         if (mapBounds.top > mapContainerBounds.top) {
           setTransition(0.4);
-          newCrop.y = -40;
+          newCrop.y = -48;
         } else if (mapBounds.bottom < mapContainerBounds.bottom) {
           setTransition(0.4);
-          newCrop.y = -(mapBounds.height - mapContainerBounds.height + 40);
+          newCrop.y = -(mapBounds.height - mapContainerBounds.height + 48);
         }
 
         setCrop(newCrop);
@@ -99,7 +100,7 @@ const Map = ({ isGameOn }) => {
           transform: `translate(${crop.x}px, ${crop.y}px)`,
           transitionDuration: isMobile ? `${transition}s` : '0.4s'
         }}
-        className="relative top-10"
+        className="relative top-12"
       >
         {shuffledLetters.map((letter, index) => (
           <Tile
