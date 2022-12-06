@@ -1,8 +1,11 @@
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
 import React, { useState, useEffect } from 'react';
 import { useGameContext } from '../contexts/GameContext';
 import TileCard from './TileCard';
 import '../styles/tile.css';
 import ids from '../data/ids.json';
+import svgs from '../data/svgs';
 
 const Tile = ({ isGameOn, setCrop, letter, index, setActiveLetter, activeLetter }) => {
   const { tileClickHandler: gameClickHandler } = useGameContext();
@@ -62,7 +65,12 @@ const Tile = ({ isGameOn, setCrop, letter, index, setActiveLetter, activeLetter 
           {!isMobile && activeLetter && activeLetter === letter && (
             <TileCard setActiveLetter={setActiveLetter} id={ids[index]} letter={letter} />
           )}
-          {!activeLetter && <p className="text-3xl font-bold uppercase">{letter}</p>}
+          {activeLetter !== letter && (
+            <div className="relative">
+              {svgs[letter]}
+              <img src={require(`../assets/letters/${letter}.jpg`)} alt={`letter ${letter}`} />
+            </div>
+          )}
         </div>
       </div>
     </>
