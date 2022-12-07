@@ -5,6 +5,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import letters from '../data/letters.json';
+
 const LetterCarousel = ({ children, initialLetter, showDots }) => {
   const sliderRef = useRef();
 
@@ -72,28 +74,38 @@ const LetterCarousel = ({ children, initialLetter, showDots }) => {
     slidesToScroll: 1,
     arrows: false,
     customPaging(i) {
-      return <div className="w-8 h-8 border-2 border-white rounded-full custom-dots">{i}</div>;
+      return (
+        <div className="flex items-center justify-center w-8 h-8 font-semibold uppercase bg-gray-400 rounded-full custom-dots bg-gray">
+          {Object.keys(letters)[i]}
+        </div>
+      );
     },
-    appendDots: (dots) => (
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          bottom: '20px',
-          gap: '3rem'
-        }}
-      >
-        <ul className="">{dots}</ul>
-      </div>
-    )
+    appendDots: (dots) => {
+      const activeIndex = +dots.filter((dot) => dot.props.className === 'slick-active')[0].key;
+      const trimmedDots = [dots[activeIndex - 1], dots[activeIndex], dots[activeIndex + 1]];
+
+      return (
+        <div
+          style={{
+            position: 'initial',
+            height: '2rem',
+            marginTop: '-1rem'
+          }}
+        >
+          <ul className="flex justify-center h-8 gap-3 bottom-10">{trimmedDots}</ul>
+        </div>
+      );
+    }
   };
 
   return (
     <div className="relative w-full h-full white">
-      <div className="absolute z-10 bottom-6 right-10">
-        <ArrowLeft />
-        <ArrowRight />
-      </div>
+      {!showDots && (
+        <div className="absolute z-10 bottom-6 right-10">
+          <ArrowLeft />
+          <ArrowRight />
+        </div>
+      )}
 
       <Slider ref={sliderRef} className="relative w-full h-full" {...settings}>
         {children}

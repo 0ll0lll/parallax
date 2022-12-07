@@ -67,20 +67,36 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
         onClick={closeBtnClickHandler}
         aria-label="close button"
         type="button"
-        className="absolute z-20 w-5 h-5 bg-red-500 rounded-full top-4 right-4"
-      />
+        className="absolute z-20 rounded-full top-4 right-4"
+      >
+        <svg width="30" height="30" viewBox="0 0 30 30">
+          <g transform="translate(0.053 0.003)">
+            <g transform="translate(-0.053 -0.003)" fill="none" stroke="#00082b" strokeWidth="1">
+              <circle cx="15" cy="15" r="15" stroke="none" />
+              <circle cx="15" cy="15" r="14.5" fill="none" />
+            </g>
+            <g transform="translate(8.569 8.779)">
+              <line x1="12.756" y1="12.437" fill="none" stroke="#00082b" strokeWidth="1" />
+              <line y1="12.437" x2="12.756" fill="none" stroke="#00082b" strokeWidth="1" />
+            </g>
+          </g>
+        </svg>
+      </button>
       <LetterCarousel initialLetter={Object.keys(letters).indexOf(letter)} showDots={isMobile}>
         {Object.keys(letters).map((tempLetter, index) => (
-          <div key={tempLetter} className="h-full">
-            <div className="flex items-center h-full">
-              <div className="w-1/2 pl-10">
+          <div key={tempLetter} className="h-full overflow-auto">
+            <div className={`items-center h-full ${isMobile ? 'px-4' : 'flex'}`}>
+              {isMobile && <span className="inline-block mt-4">{index + 1}/26</span>}
+
+              <div className={`${isMobile ? 'mt-4' : 'w-1/2 pl-10'}`}>
                 <img src={require(`../assets/letters/${tempLetter}.jpg`)} alt={`letter ${tempLetter}`} />
               </div>
 
-              <div className="w-1/2">
-                <div className="px-16 py-10">
-                  <span className="text-xs">{index + 1}/26</span>
-                  <h1 className="my-6 text-4xl font-bold">
+              <div className={`${isMobile ? '' : 'w-1/2'}`}>
+                <div className={`${isMobile ? 'text-sm' : 'px-16 py-10'}`}>
+                  {!isMobile && <span className="text-sm">{index + 1}/26</span>}
+
+                  <h1 className={`font-bold ${isMobile ? 'text-xl mt-4 mb-2' : 'text-4xl my-6'}`}>
                     <span className="uppercase">{tempLetter}</span> is for {letters[tempLetter].details}
                   </h1>
                   <p>
@@ -90,7 +106,7 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
                   <a
                     target="_blank"
                     href={letters[tempLetter].url ? letters[tempLetter].url : null}
-                    className="px-6 py-1 mt-6 border-[1px] bg-white border-black inline-block rounded-full hover:bg-black hover:text-white"
+                    className="px-6 py-1 mt-6 mb-12 border-[1px] bg-white border-black inline-block rounded-full hover:bg-black hover:text-white"
                     rel="noreferrer"
                   >
                     Read more

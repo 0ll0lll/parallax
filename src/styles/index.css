@@ -15,11 +15,14 @@ code {
 }
 
 .slick-active > .custom-dots {
-  @apply bg-white;
+  @apply text-white bg-blue;
 }
 
-.slick-list,
 .slick-track,
 .slick-slide > div {
   @apply h-full;
+}
+
+.slick-list {
+  height: calc(100% - 2rem);
 }
