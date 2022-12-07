@@ -13,3 +13,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.slick-active > .custom-dots {
+  @apply bg-white;
+}
+
+.slick-list,
+.slick-track,
+.slick-slide > div {
+  @apply h-full;
+}
