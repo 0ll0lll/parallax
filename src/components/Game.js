@@ -34,12 +34,12 @@ const Game = ({ isGameOn }) => {
   if (!isGameOn) return null;
 
   return (
-    <div className="fixed -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+    <div>
       {letters.map((letter, index) => (
         <span
           key={letter}
-          className={`md:text-xl tracking-[.2rem] md:tracking-[.4rem] uppercase
-        ${letter === matchedLetters[index] ? 'text-black' : 'text-gray-400'}`}
+          className={`text-xs md:text-xl tracking-[.1rem] md:tracking-[.4rem] uppercase
+        ${letter === matchedLetters[index] ? 'text-blue' : 'text-black/50'}`}
         >
           {letter}
         </span>

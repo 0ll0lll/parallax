@@ -11,10 +11,9 @@ function App() {
   return (
     <GameWrapper>
       <div>
-        <Header setIsGameOn={setIsGameOn} />
+        <Header isGameOn={isGameOn} setIsGameOn={setIsGameOn} />
         <main style={{ height: 'calc(100vh - 3rem)' }} className="bg-beige">
           <Map isGameOn={isGameOn} />
-          <Game isGameOn={isGameOn} />
           <Santa isGameOn={isGameOn} />
         </main>
       </div>
