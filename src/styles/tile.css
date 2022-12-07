@@ -25,6 +25,8 @@
   background-color: #fff;
   transition: ease-out;
   transition-duration: 0.2s;
+  min-height: 420px;
+  min-width: 800px;
   height: 60vh;
   width: 100vh;
   top: 50%;

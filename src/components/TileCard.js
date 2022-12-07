@@ -1,7 +1,7 @@
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
-
 import React, { useEffect, useState } from 'react';
+import letters from '../data/letters.json';
 
 const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
   const [isReady, setIsReady] = useState(false);
@@ -44,11 +44,15 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
         <img src={require(`../assets/letters/${letter}.jpg`)} alt={`letter ${letter}`} />
       </div>
       <div className={`flex items-center pr-16 ${isMobile ? 'w-full' : 'w-1/2'}`}>
-        <p className="py-10 pl-16">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptatem autem tempore libero eum
-          cupiditate recusandae praesentium nisi sapiente dolores soluta quo, suscipit ea saepe aspernatur modi. Labore,
-          eos cupiditate.
-        </p>
+        <div className="py-10 pl-16">
+          <h1 className="mb-6 text-4xl font-bold">
+            <span className="uppercase">{letter}</span> is for {letters[letter]}
+          </h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptatem autem tempore libero eum
+            cupiditate recusandae praesentium nisi sapiente dolores soluta quo,
+          </p>
+        </div>
       </div>
     </div>
   );
