@@ -1,5 +1,5 @@
 import React from 'react';
-import santa from '../assets/santa.svg';
+import santa from '../assets/santa.png';
 import '../styles/santa.css';
 
 const Santa = ({ isGameOn }) => (
@@ -8,7 +8,7 @@ const Santa = ({ isGameOn }) => (
       {isGameOn && <p>Find all letters, A to Z 🔎 Good luck 👍 </p>}
       {!isGameOn && <p>Ho ho ho 🎄 Lorem ipsum dolor sit ☃️</p>}
     </div>
-    <img className="h-40 md:h-60" src={santa} alt="santa" />
+    <img className="object-contain h-40 md:h-60" src={santa} alt="santa" />
     <h1 className="mt-6 mb-4 text-2xl font-bold md:text-4xl">Letters from Santa</h1>
     <p className="text-xs md:font-semibold md:leading-6 md:text-sm">
       I haven’t received as many letters this Holiday. Children’s education has suffered these past few years. So I am
