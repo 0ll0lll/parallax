@@ -44,7 +44,7 @@ const Map = ({ isGameOn }) => {
   useEffect(() => {
     if (window.innerWidth < 768) {
       setIsMobile(true);
-      setCrop({ x: -mapRef.current.clientWidth / 2, y: -mapRef.current.clientHeight / 2 });
+      setCrop({ x: -mapRef.current.clientWidth / 2 + 200, y: -mapRef.current.clientHeight / 2 + 300 });
     }
   }, []);
 
