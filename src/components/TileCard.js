@@ -30,34 +30,6 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
   }, []);
 
   return (
-    // <div
-    //   className={`drop-shadow-md relative flex w-full h-full bg-white rounded-[10px] overflow-hidden transition-opacity
-    //   ${isReady ? 'opacity-100' : 'opacity-0'}
-    //   ${isMobile ? 'flex-col justify-center h-full' : ''}
-    //   `}
-    // >
-    //   <button
-    //     onClick={closeBtnClickHandler}
-    //     aria-label="close button"
-    //     type="button"
-    //     className="absolute z-20 w-5 h-5 bg-red-500 rounded-full top-4 right-4"
-    //   />
-    //   <div className={`flex items-center justify-center ${isMobile ? 'w-full' : 'pl-10 w-1/2'}`}>
-    //     <img src={require(`../assets/letters/${letter}.jpg`)} alt={`letter ${letter}`} />
-    //   </div>
-    //   <div className={`flex items-center pr-16 ${isMobile ? 'w-full' : 'w-1/2'}`}>
-    // <div className="py-10 pl-16">
-    //   <h1 className="mb-6 text-4xl font-bold">
-    //     <span className="uppercase">{letter}</span> is for {letters[letter]}
-    //   </h1>
-    //   <p>
-    //     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptatem autem tempore libero eum
-    //     cupiditate recusandae praesentium nisi sapiente dolores soluta quo,
-    //   </p>
-    // </div>
-    //   </div>
-    // </div>
-
     <div
       className={`drop-shadow-md relative flex w-full h-full bg-white rounded-[10px] overflow-hidden transition-opacity ${
         isReady ? 'opacity-100' : 'opacity-0'
@@ -84,7 +56,7 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
       </button>
       <LetterCarousel initialLetter={Object.keys(letters).indexOf(letter)} showDots={isMobile}>
         {Object.keys(letters).map((tempLetter, index) => (
-          <div key={tempLetter} className="h-full overflow-auto">
+          <div key={tempLetter} className="h-full overflow-auto md:overflow-hidden">
             <div className={`items-center h-full ${isMobile ? 'px-4' : 'flex'}`}>
               {isMobile && <span className="inline-block mt-4">{index + 1}/26</span>}
 
