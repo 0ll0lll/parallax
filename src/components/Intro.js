@@ -1,5 +1,5 @@
 const Intro = () => (
-  <div id="intro" className="relative z-30 flex flex-col items-center justify-center w-screen h-screen bg-beige">
+  <div id="intro" className="fixed z-30 flex flex-col items-center justify-center w-screen h-screen bg-beige">
     <svg width="102.352" height="122.734" viewBox="0 0 102.352 122.734">
       <defs>
         <clipPath id="a">

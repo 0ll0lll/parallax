@@ -26,3 +26,32 @@ code {
 .slick-list {
   height: calc(100% - 2rem);
 }
+
+#intro {
+  animation: fadeout 0.2s ease-out 2.8s forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+main {
+  opacity: 0;
+  animation: fadein 0.4s ease-out 3s forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

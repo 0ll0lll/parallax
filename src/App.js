@@ -19,10 +19,10 @@ function App() {
 
   return (
     <GameWrapper>
-      <div>
+      <div className="bg-beige">
         {showIntro && <Intro />}
         <Header isGameOn={isGameOn} setIsGameOn={setIsGameOn} />
-        <main style={{ height: 'calc(100vh - 3rem)' }} className="bg-beige">
+        <main style={{ height: 'calc(100vh - 3rem)' }}>
           <Map isGameOn={isGameOn} />
           <Santa isGameOn={isGameOn} />
         </main>
