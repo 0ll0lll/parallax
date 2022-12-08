@@ -13,14 +13,14 @@ const LetterCarousel = ({ children, initialLetter, showDots }) => {
   const ArrowLeft = () => (
     <svg
       onClick={() => sliderRef.current.slickPrev()}
-      className="inline-block cursor-pointer"
+      className="inline-block cursor-pointer stroke-[#00082b] fill-white hover:stroke-white hover:fill-[#00082b]"
       width="30"
       height="30"
       viewBox="0 0 40 40"
     >
       <g transform="translate(39.596 39.765) rotate(180)">
         <g transform="translate(-0.404 -0.235)">
-          <g fill="none" stroke="#00082b" strokeWidth="1">
+          <g fill="fill-current" stroke="#00082b" strokeWidth="1">
             <circle cx="20" cy="20" r="20" stroke="none" />
             <circle cx="20" cy="20" r="19.5" fill="none" />
           </g>
@@ -29,7 +29,7 @@ const LetterCarousel = ({ children, initialLetter, showDots }) => {
           d="M0,0,10.554,10.554,0,21.109"
           transform="translate(16.121 9.699)"
           fill="none"
-          stroke="#00082b"
+          stroke="stroke-current"
           strokeWidth="1"
         />
       </g>
@@ -39,14 +39,14 @@ const LetterCarousel = ({ children, initialLetter, showDots }) => {
   const ArrowRight = () => (
     <svg
       onClick={() => sliderRef.current.slickNext()}
-      className="inline-block ml-4 cursor-pointer"
+      className="inline-block cursor-pointer stroke-[#00082b] fill-white hover:stroke-white hover:fill-[#00082b] ml-4"
       width="30"
       height="30"
       viewBox="0 0 40 40"
     >
       <g transform="translate(0.457 -0.247)">
         <g transform="translate(-0.457 0.247)">
-          <g fill="none" stroke="#00082b" strokeWidth="1">
+          <g fill="fill-current" stroke="#00082b" strokeWidth="1">
             <circle cx="20" cy="20" r="20" stroke="none" />
             <circle cx="20" cy="20" r="19.5" fill="none" />
           </g>
@@ -55,7 +55,7 @@ const LetterCarousel = ({ children, initialLetter, showDots }) => {
           d="M4474.146,1621.241,4484.7,1631.8l-10.554,10.554"
           transform="translate(-4458.037 -1611.547)"
           fill="none"
-          stroke="#00082b"
+          stroke="stroke-current"
           strokeWidth="1"
         />
       </g>
