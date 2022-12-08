@@ -1,29 +1,31 @@
 const Intro = () => (
   <div id="intro" className="fixed z-30 flex flex-col items-center justify-center w-screen h-screen bg-beige">
-    <svg width="102.352" height="122.734" viewBox="0 0 102.352 122.734">
-      <defs>
-        <clipPath id="a">
-          <rect width="102.352" height="122.734" fill="none" />
-        </clipPath>
-      </defs>
-      <g clipPath="url(#a)">
-        <path
-          d="M43.01,65.609l-16,10.5-.08-.063L37.186,59.436.013,51.187c0-.032-.009-.064-.013-.1l36.777-8.1L26.259,26.945c.021-.025.041-.05.062-.076l16.6,10.294Q47.069,18.52,51.188,0l.074,0c2.7,12.229,5.4,24.459,8.118,36.778L75.385,26.3l.087.082L65.217,42.906l37.131,8.182c0,.033,0,.065,0,.1L65.6,59.345l10.512,16-.063.085L59.463,65.193q-4.107,28.832-8.2,57.538l-.083,0Q47.1,94.214,43.01,65.609"
-          fill="#f7b53f"
-        />
-      </g>
-    </svg>
+    <div className="flex items-end justify-center h-40 mb-[3.8rem] md:h-60">
+      <svg width="102.352" height="122.734" viewBox="0 0 102.352 122.734">
+        <defs>
+          <clipPath id="a">
+            <rect width="102.352" height="122.734" fill="none" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#a)">
+          <path
+            d="M43.01,65.609l-16,10.5-.08-.063L37.186,59.436.013,51.187c0-.032-.009-.064-.013-.1l36.777-8.1L26.259,26.945c.021-.025.041-.05.062-.076l16.6,10.294Q47.069,18.52,51.188,0l.074,0c2.7,12.229,5.4,24.459,8.118,36.778L75.385,26.3l.087.082L65.217,42.906l37.131,8.182c0,.033,0,.065,0,.1L65.6,59.345l10.512,16-.063.085L59.463,65.193q-4.107,28.832-8.2,57.538l-.083,0Q47.1,94.214,43.01,65.609"
+            fill="#f7b53f"
+          />
+        </g>
+      </svg>
+    </div>
 
     <div className="w-4/5 text-center md:w-auto md:max-w-lg">
       <h1 className="mt-6 mb-4 text-2xl font-bold md:text-4xl">Letters from Santa</h1>
-      <p className="text-xs md:font-semibold md:leading-6 md:text-sm">
+      {/* <p className="text-xs md:font-semibold md:leading-6 md:text-sm">
         I haven’t received as many letters this Holiday. Children’s education has suffered these past few years. So I am
         sending you letters in the hope that we can all understand literacy a little better and do our bit to give the
         gift of literacy to others.{' '}
-      </p>
+      </p> */}
     </div>
 
-    <div className="flex items-center justify-between gap-8 mt-8">
+    <div className="flex items-center justify-between gap-8 mt-8 pr-[18px]">
       <svg width="79.791" height="34.934" viewBox="0 0 79.791 34.934">
         <defs>
           <clipPath id="a">
