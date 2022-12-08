@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         beige: '#FDF4E9',
         blue: '#3B8FFB',
-        gray: '#DDD8D8'
+        gray: '#DDD8D8',
+        'teal-dark': '#003341'
       }
     }
   },
