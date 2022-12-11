@@ -1,6 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState, useEffect } from 'react';
 import icons from '../data/icons';
+import meta from '../data/meta.json';
 
 const Dropdown = ({ setShowAbout, setShowDonate, setIsGameOn }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -105,26 +108,46 @@ const Dropdown = ({ setShowAbout, setShowDonate, setIsGameOn }) => {
                 Share
               </span>
               <a
-                className="flex items-center block w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
-                href="#"
+                className="flex items-center w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
+                data-href="https://www.facebook.com/sharer/sharer.php?u="
+                onClick={(e) => {
+                  window.open(e.currentTarget.href, '', 'menubar=no, toolbar=no, resizable=yes, height=255, width=600');
+                  return false;
+                }}
+                target="_blank"
+                href={`https://www.facebook.com/sharer/sharer.php?u=http://general.dev.steinias.com/pages/letters/&amp;quote=${meta.description}`}
+                rel="noreferrer"
               >
                 {icons.facebook} Facebook
               </a>
               <a
-                className="flex items-center block w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
-                href="#"
+                className="flex items-center w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
+                data-href="https://www.linkedin.com/sharing/share-offsite/?url="
+                onClick={(e) => {
+                  window.open(e.currentTarget.href, '', 'menubar=no, toolbar=no, resizable=yes, height=255, width=600');
+                  return false;
+                }}
+                target="_blank"
+                href="https://www.linkedin.com/sharing/share-offsite/?url=http://general.dev.steinias.com/pages/letters/"
+                rel="noreferrer"
               >
                 {icons.linkedin} Linked In
               </a>
               <a
-                className="flex items-center block w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
-                href="#"
+                className="flex items-center w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
+                target="_blank"
+                href={`https://twitter.com/intent/tweet?text=${meta.description}%20-%20http://general.dev.steinias.com/pages/letters/`}
+                onClick={(e) => {
+                  window.open(e.currentTarget.href, '', 'menubar=no, toolbar=no, resizable=yes, height=255, width=600');
+                  return false;
+                }}
+                rel="noreferrer"
               >
                 {icons.twitter} Twitter
               </a>
               <a
-                className="flex items-center block w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
-                href="#"
+                className="flex items-center w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
+                href={`mailto:?subject=${meta.title}&body=${meta.description}`}
               >
                 {icons.email} E-mail
               </a>

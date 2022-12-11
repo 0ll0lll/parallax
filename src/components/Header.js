@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Game from './Game';
 import icons from '../data/icons';
 import Dropdown from './Dropdown';
+import meta from '../data/meta.json';
 
 const Header = ({ disableHeader, setShowDonate, setShowAbout, setIsGameOn, isGameOn }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -106,22 +107,66 @@ const Header = ({ disableHeader, setShowDonate, setShowAbout, setIsGameOn, isGam
                 aria-labelledby="dropdownMenuButton1d"
               >
                 <li>
-                  <a className="block w-full text-sm font-normal text-black bg-transparent dropdown-item" href="#">
+                  <a
+                    data-href="https://www.facebook.com/sharer/sharer.php?u="
+                    onClick={(e) => {
+                      window.open(
+                        e.currentTarget.href,
+                        '',
+                        'menubar=no, toolbar=no, resizable=yes, height=255, width=600'
+                      );
+                      return false;
+                    }}
+                    target="_blank"
+                    href={`https://www.facebook.com/sharer/sharer.php?u=http://general.dev.steinias.com/pages/letters/&amp;quote=${meta.description}`}
+                    rel="noreferrer"
+                    className="block w-full text-sm font-normal text-black bg-transparent dropdown-item"
+                  >
                     {icons.facebook}
                   </a>
                 </li>
                 <li>
-                  <a className="block w-full text-sm font-normal text-black bg-transparent dropdown-item" href="#">
+                  <a
+                    data-href="https://www.linkedin.com/sharing/share-offsite/?url="
+                    onClick={(e) => {
+                      window.open(
+                        e.currentTarget.href,
+                        '',
+                        'menubar=no, toolbar=no, resizable=yes, height=255, width=600'
+                      );
+                      return false;
+                    }}
+                    target="_blank"
+                    href="https://www.linkedin.com/sharing/share-offsite/?url=http://general.dev.steinias.com/pages/letters/"
+                    rel="noreferrer"
+                    className="block w-full text-sm font-normal text-black bg-transparent dropdown-item"
+                  >
                     {icons.linkedin}
                   </a>
                 </li>
                 <li>
-                  <a className="block w-full text-sm font-normal text-black bg-transparent dropdown-item" href="#">
+                  <a
+                    target="_blank"
+                    href={`https://twitter.com/intent/tweet?text=${meta.description}%20-%20http://general.dev.steinias.com/pages/letters/`}
+                    onClick={(e) => {
+                      window.open(
+                        e.currentTarget.href,
+                        '',
+                        'menubar=no, toolbar=no, resizable=yes, height=255, width=600'
+                      );
+                      return false;
+                    }}
+                    rel="noreferrer"
+                    className="block w-full text-sm font-normal text-black bg-transparent dropdown-item"
+                  >
                     {icons.twitter}
                   </a>
                 </li>
                 <li>
-                  <a className="block w-full text-sm font-normal text-black bg-transparent dropdown-item" href="#">
+                  <a
+                    href={`mailto:?subject=${meta.title}&body=${meta.description}`}
+                    className="block w-full text-sm font-normal text-black bg-transparent dropdown-item"
+                  >
                     {icons.email}
                   </a>
                 </li>

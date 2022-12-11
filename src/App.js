@@ -15,8 +15,6 @@ function App() {
   const [showAbout, setShowAbout] = useState(false);
   const [disableHeader, setDisableHeader] = useState(false);
 
-  console.log(disableHeader);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
