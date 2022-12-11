@@ -113,11 +113,6 @@ const Map = ({ isGameOn }) => {
             index={index}
           />
         ))}
-
-        <p className="absolute top-0 left-0 font-bold bg-red-500"> TOP LEFT</p>
-        <p className="absolute bottom-0 left-0 font-bold bg-red-500"> BOTTOM LEFT</p>
-        <p className="absolute top-0 right-0 font-bold bg-red-500"> TOP RIGHT</p>
-        <p className="absolute bottom-0 right-0 font-bold bg-red-500"> BOTTOM RIGHT</p>
       </div>
     </div>
   );

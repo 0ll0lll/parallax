@@ -4,10 +4,15 @@ import Intro from './components/Intro';
 import Map from './components/Map';
 import Header from './components/Header';
 import Santa from './components/Santa';
+import About from './components/About';
+import Donate from './components/Donate';
 
 function App() {
   const [isGameOn, setIsGameOn] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
+
+  const [showDonate, setShowDonate] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,7 +26,16 @@ function App() {
     <GameWrapper>
       <div className="bg-beige">
         {showIntro && <Intro />}
-        <Header isGameOn={isGameOn} setIsGameOn={setIsGameOn} />
+
+        {showDonate && <Donate setShowDonate={setShowDonate} />}
+        {showAbout && <About setShowAbout={setShowAbout} />}
+
+        <Header
+          setShowDonate={setShowDonate}
+          setShowAbout={setShowAbout}
+          isGameOn={isGameOn}
+          setIsGameOn={setIsGameOn}
+        />
         <main style={{ height: 'calc(100vh - 3rem)' }}>
           <Map isGameOn={isGameOn} />
           <Santa isGameOn={isGameOn} />

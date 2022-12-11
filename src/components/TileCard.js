@@ -42,13 +42,13 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
         className="absolute z-20 rounded-full top-4 right-4"
       >
         <svg
-          className="stroke-[#00082b] hover:stroke-white fill-white hover:fill-[#00082b]"
+          className="stroke-black hover:stroke-white fill-white hover:fill-[black]"
           width="30"
           height="30"
           viewBox="0 0 30 30"
         >
           <g transform="translate(0.053 0.003)">
-            <g transform="translate(-0.053 -0.003)" fill="fill-current" stroke="#00082b" strokeWidth="1">
+            <g transform="translate(-0.053 -0.003)" fill="fill-current" stroke="black" strokeWidth="1">
               <circle cx="15" cy="15" r="15" stroke="none" />
               <circle cx="15" cy="15" r="14.5" fill="none" />
             </g>

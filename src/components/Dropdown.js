@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import icons from '../data/icons';
 
-const Dropdown = ({ setIsGameOn }) => {
+const Dropdown = ({ setShowAbout, setShowDonate, setIsGameOn }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -35,7 +35,7 @@ const Dropdown = ({ setIsGameOn }) => {
           <ul
             className={`${showMenu ? '' : 'hidden'} ${
               isMobile ? 'mt-5' : 'mt-3'
-            } absolute right-0 z-50 float-left py-2 m-0  text-base text-left list-none bg-white border-none rounded-lg shadow-lg dropdown-menu min-w-max bg-clip-padding`}
+            } min-w-[14rem] absolute right-0 z-50 float-left py-2 m-0 text-base text-left list-none bg-white border-none rounded-lg shadow-lg dropdown-menu bg-clip-padding`}
             aria-labelledby="dropdownMenuButton1d"
           >
             {/* <li>
@@ -54,6 +54,26 @@ const Dropdown = ({ setIsGameOn }) => {
             </li>
             <hr className="h-0 my-2 border border-t-0 border-solid opacity-25 border-black/30" /> */}
             <li>
+              <button
+                onClick={() => setShowAbout(true)}
+                type="button"
+                className="inline-block w-full px-4 py-2 text-sm font-normal text-left text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
+              >
+                About
+              </button>
+            </li>
+            <hr className="h-0 my-2 border border-t-0 border-solid opacity-25 border-black/30" />
+            <li>
+              <button
+                onClick={() => setShowDonate(true)}
+                type="button"
+                className="inline-block w-full px-4 py-2 text-sm font-normal text-left text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
+              >
+                Donate
+              </button>
+            </li>
+            <hr className="h-0 my-2 border border-t-0 border-solid opacity-25 border-black/30" />
+            <li>
               <a
                 className="block w-full px-4 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
                 href="#"
@@ -61,8 +81,8 @@ const Dropdown = ({ setIsGameOn }) => {
                 Download PDF
               </a>
             </li>
-            <hr className="h-0 my-2 border border-t-0 border-solid opacity-25 border-black/30" />
-            <li>
+            {/* <hr className="h-0 my-2 border border-t-0 border-solid opacity-25 border-black/30" /> */}
+            {/* <li>
               <span className="block w-full px-4 pt-2 pb-1 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap">
                 Donate ✨
               </span>
@@ -78,32 +98,32 @@ const Dropdown = ({ setIsGameOn }) => {
               >
                 Reading Team (US)
               </a>
-            </li>
+            </li> */}
             <hr className="h-0 my-2 border border-t-0 border-solid opacity-25 border-black/30" />
             <li>
               <span className="block w-full px-4 pt-2 pb-1 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap">
                 Share
               </span>
               <a
-                className="flex items-center block w-full gap-3 py-2 pl-6 pr-4 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
+                className="flex items-center block w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
                 href="#"
               >
                 {icons.facebook} Facebook
               </a>
               <a
-                className="flex items-center block w-full gap-3 py-2 pl-6 pr-4 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
+                className="flex items-center block w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
                 href="#"
               >
                 {icons.linkedin} Linked In
               </a>
               <a
-                className="flex items-center block w-full gap-3 py-2 pl-6 pr-4 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
+                className="flex items-center block w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
                 href="#"
               >
                 {icons.twitter} Twitter
               </a>
               <a
-                className="flex items-center block w-full gap-3 py-2 pl-6 pr-4 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
+                className="flex items-center block w-full gap-3 px-6 py-2 text-sm font-normal text-black bg-transparent dropdown-item whitespace-nowrap hover:bg-gray/50"
                 href="#"
               >
                 {icons.email} E-mail

@@ -5,7 +5,7 @@ import Game from './Game';
 import icons from '../data/icons';
 import Dropdown from './Dropdown';
 
-const Header = ({ setIsGameOn, isGameOn }) => {
+const Header = ({ setShowDonate, setShowAbout, setIsGameOn, isGameOn }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [isMobile, setIsMobile] = useState();
 
@@ -68,6 +68,7 @@ const Header = ({ setIsGameOn, isGameOn }) => {
       {!isMobile && (
         <div className="flex items-center gap-6">
           <button
+            onClick={() => setShowAbout(true)}
             type="button"
             className="px-5 py-1 text-sm border-[1px] border-black rounded-full hover:bg-black hover:text-white"
           >
@@ -128,6 +129,7 @@ const Header = ({ setIsGameOn, isGameOn }) => {
           </div>
 
           <button
+            onClick={() => setShowDonate(true)}
             type="button"
             className="px-5 py-1 text-sm text-white border-[1px] border-blue rounded-full bg-blue hover:bg-blue/90"
           >
@@ -142,7 +144,7 @@ const Header = ({ setIsGameOn, isGameOn }) => {
         </div>
       )}
 
-      {isMobile && <Dropdown setIsGameOn={setIsGameOn} />}
+      {isMobile && <Dropdown setShowDonate={setShowDonate} setShowAbout={setShowAbout} setIsGameOn={setIsGameOn} />}
     </header>
   );
 };
