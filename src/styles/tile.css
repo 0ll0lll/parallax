@@ -27,7 +27,7 @@
   transition-duration: 0.2s;
   min-height: 420px;
   min-width: 800px;
-  max-width: 1000px;
+  max-width: 450px;
   max-height: 800px;
   height: 60vh;
   width: 100vh;
@@ -38,6 +38,12 @@
   position: fixed;
   cursor: default;
   @apply shadow-md;
+}
+
+@media only screen and (min-width: 1024px) {
+  .active {
+    max-width: 1000px;
+  }
 }
 
 .shaking {

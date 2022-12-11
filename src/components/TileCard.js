@@ -65,11 +65,15 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
             <div className={`items-center h-full ${isMobile ? 'px-4' : 'flex'}`}>
               {isMobile && <span className="inline-block mt-4">{index + 1}/26</span>}
 
-              <div className={`${isMobile ? 'mt-4' : 'w-1/2 pl-10'}`}>
-                <img src={require(`../assets/letters/${tempLetter}.jpg`)} alt={`letter ${tempLetter}`} />
+              <div className={`${isMobile ? 'mt-4' : 'py-6 pl-6 md:w-1/2 lg:w-auto lg:h-full'}`}>
+                <img
+                  className="w-full h-full"
+                  src={require(`../assets/letters/${tempLetter}.jpg`)}
+                  alt={`letter ${tempLetter}`}
+                />
               </div>
 
-              <div className={`${isMobile ? '' : 'w-1/2'}`}>
+              <div className={`${isMobile ? '' : 'flex-1'}`}>
                 <div className={`${isMobile ? 'text-sm' : 'px-16 py-10'}`}>
                   {!isMobile && <span className="text-sm">{index + 1}/26</span>}
 

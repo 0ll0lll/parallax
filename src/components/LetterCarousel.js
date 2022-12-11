@@ -13,14 +13,14 @@ const LetterCarousel = ({ children, initialLetter, showDots }) => {
   const ArrowLeft = () => (
     <svg
       onClick={() => sliderRef.current.slickPrev()}
-      className="inline-block cursor-pointer stroke-[#00082b] fill-white hover:stroke-white hover:fill-[#00082b]"
+      className="inline-block cursor-pointer stroke-black fill-white hover:stroke-white hover:fill-black"
       width="30"
       height="30"
       viewBox="0 0 40 40"
     >
       <g transform="translate(39.596 39.765) rotate(180)">
         <g transform="translate(-0.404 -0.235)">
-          <g fill="fill-current" stroke="#00082b" strokeWidth="1">
+          <g fill="fill-current" stroke="black" strokeWidth="1">
             <circle cx="20" cy="20" r="20" stroke="none" />
             <circle cx="20" cy="20" r="19.5" fill="none" />
           </g>
@@ -39,14 +39,14 @@ const LetterCarousel = ({ children, initialLetter, showDots }) => {
   const ArrowRight = () => (
     <svg
       onClick={() => sliderRef.current.slickNext()}
-      className="inline-block cursor-pointer stroke-[#00082b] fill-white hover:stroke-white hover:fill-[#00082b] ml-4"
+      className="inline-block ml-4 cursor-pointer stroke-black fill-white hover:stroke-white hover:fill-black"
       width="30"
       height="30"
       viewBox="0 0 40 40"
     >
       <g transform="translate(0.457 -0.247)">
         <g transform="translate(-0.457 0.247)">
-          <g fill="fill-current" stroke="#00082b" strokeWidth="1">
+          <g fill="fill-current" stroke="black" strokeWidth="1">
             <circle cx="20" cy="20" r="20" stroke="none" />
             <circle cx="20" cy="20" r="19.5" fill="none" />
           </g>
