@@ -3,7 +3,7 @@ import { useGesture } from 'react-use-gesture';
 import '../styles/map.css';
 import Tile from './Tile';
 
-const Map = ({ isGameOn }) => {
+const Map = ({ isGameOn, setDisableHeader }) => {
   const letters = [
     'a',
     'b',
@@ -47,6 +47,14 @@ const Map = ({ isGameOn }) => {
       setCrop({ x: -mapRef.current.clientWidth / 2 + 200, y: -mapRef.current.clientHeight / 2 + 300 });
     }
   }, []);
+
+  useEffect(() => {
+    if (activeLetter !== null) {
+      setDisableHeader(true);
+    } else {
+      setDisableHeader(false);
+    }
+  }, [activeLetter]);
 
   useGesture(
     {

@@ -13,6 +13,9 @@ function App() {
 
   const [showDonate, setShowDonate] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [disableHeader, setDisableHeader] = useState(false);
+
+  console.log(disableHeader);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,13 +34,14 @@ function App() {
         {showAbout && <About setShowAbout={setShowAbout} />}
 
         <Header
+          disableHeader={disableHeader}
           setShowDonate={setShowDonate}
           setShowAbout={setShowAbout}
           isGameOn={isGameOn}
           setIsGameOn={setIsGameOn}
         />
         <main style={{ height: 'calc(100vh - 3rem)' }}>
-          <Map isGameOn={isGameOn} />
+          <Map setDisableHeader={setDisableHeader} isGameOn={isGameOn} />
           <Santa isGameOn={isGameOn} />
         </main>
       </div>
