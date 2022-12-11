@@ -1,11 +1,11 @@
 import React from 'react';
 import santa from '../assets/santa.png';
-import '../styles/santa.css';
+// import '../styles/santa.css';
 
 const Santa = ({ isGameOn }) => (
   <div className="fixed flex flex-col justify-center w-4/5 text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
     <div className="relative self-center">
-      <div className="flex items-center justify-start w-32 h-16 px-3 py-2 text-xs text-left md:text-sm md:w-40 md:h-20 speech-bubble drop-shadow-sm">
+      <div className="flex items-center justify-start invisible w-32 h-16 px-3 py-2 text-xs text-left md:text-sm md:w-40 md:h-20 speech-bubble drop-shadow-sm">
         {isGameOn && <p>Find all letters, A to Z 🔎 Good luck 👍 </p>}
         {!isGameOn && <p>Ho ho ho 🎄 Lorem ipsum dolor sit ☃️</p>}
       </div>
