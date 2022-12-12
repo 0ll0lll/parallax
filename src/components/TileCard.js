@@ -62,7 +62,7 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
       <LetterCarousel initialLetter={Object.keys(letters).indexOf(letter)} showDots={isMobile}>
         {Object.keys(letters).map((tempLetter, index) => (
           <div key={tempLetter} className="h-full overflow-auto md:overflow-hidden">
-            <div className={`items-center h-full ${isMobile ? 'px-4' : 'flex'}`}>
+            <div className={`h-full ${isMobile ? 'px-4' : 'flex'}`}>
               {isMobile && <span className="inline-block mt-4">{index + 1}/26</span>}
 
               <div className={`${isMobile ? 'mt-4' : 'py-6 pl-6 md:w-1/2 lg:w-auto lg:h-full'}`}>
@@ -74,17 +74,13 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
                 />
               </div>
 
-              <div className={`${isMobile ? '' : 'flex-1'}`}>
+              <div className={`overflow-y-scroll ${isMobile ? '' : 'flex-1 mt-16'} `}>
                 <div className={`${isMobile ? 'text-sm' : 'px-16 py-10'}`}>
                   {!isMobile && <span className="text-sm">{index + 1}/26</span>}
-
                   <h1 className={`font-bold ${isMobile ? 'text-xl mt-4 mb-2' : 'text-4xl my-6'}`}>
                     <span className="uppercase">{tempLetter}</span> is for {letters[tempLetter].details}
                   </h1>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere voluptatem autem tempore libero eum
-                    cupiditate recusandae praesentium nisi sapiente dolores soluta quo,
-                  </p>
+                  <p>{letters[tempLetter].bodyText}</p>
                   <a
                     target="_blank"
                     href={letters[tempLetter].url ? letters[tempLetter].url : null}

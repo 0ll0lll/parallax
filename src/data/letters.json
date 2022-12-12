@@ -1,28 +1,132 @@
 {
-  "a": { "details": "Alpha", "url": "" },
-  "b": { "details": "Bravo", "url": "" },
-  "c": { "details": "Chirlie", "url": "" },
-  "d": { "details": "Delta", "url": "" },
-  "e": { "details": "Echo", "url": "" },
-  "f": { "details": "Foxtrot", "url": "" },
-  "g": { "details": "Golf", "url": "" },
-  "h": { "details": "Hotel", "url": "" },
-  "i": { "details": "India", "url": "" },
-  "j": { "details": "Juliet", "url": "" },
-  "k": { "details": "Kilo", "url": "" },
-  "l": { "details": "Lima", "url": "" },
-  "m": { "details": "Mike", "url": "" },
-  "n": { "details": "November", "url": "" },
-  "o": { "details": "Oscar", "url": "" },
-  "p": { "details": "Papa", "url": "" },
-  "q": { "details": "Quebec", "url": "" },
-  "r": { "details": "Romeo", "url": "" },
-  "s": { "details": "Sierra", "url": "" },
-  "t": { "details": "Tango", "url": "" },
-  "u": { "details": "Uniform", "url": "" },
-  "v": { "details": "Victor", "url": "" },
-  "w": { "details": "Whisley", "url": "" },
-  "x": { "details": "X-ray", "url": "" },
-  "y": { "details": "Yankee", "url": "" },
-  "z": { "details": "Zulu", "url": "" }
+  "a": {
+    "details": "America",
+    "url": "https://www.dosomething.org/us/facts/11-facts-about-literacy-america",
+    "bodyText": "1 in 4 children in America grow up without learning how to read."
+  },
+  "b": {
+    "details": "Books",
+    "url": "https://literacytrust.org.uk/research-services/research-reports/role-models-and-their-influence-on-children-and-young-peoples-reading/",
+    "bodyText": "More than half (52.9%) of children and young people who had a role model agreed that seeing their role model read would make them think it's okay to read."
+  },
+  "c": {
+    "details": "Captions",
+    "url": "https://turnonthesubtitles.org/research/",
+    "bodyText": "Based on an academic study of 2,350 children, 34% became good readers with schooling alone. But when exposed to 30 minutes a week of subtitled (captioned) film songs, that proportion more than doubled to 70%. There are lots of studies about the benefits of subtitles (captions). This is just one! Check out our research page to find out more."
+  },
+  "d": {
+    "details": "Diversity ",
+    "url": "https://literacytrust.org.uk/research-services/research-reports/seeing-yourself-in-what-you-read-diversity-and-children-and-young-peoples-reading-in-2022/",
+    "bodyText": "While just over 1 in 3 (34.9%) children and young people from White backgrounds say they struggle to see themselves in what they read, this increases to nearly 1 in 2 (45.2%) children and young people from Black ethnic backgrounds."
+  },
+  "e": {
+    "details": "Enjoyment",
+    "url": "https://literacytrust.org.uk/research-services/research-themes/reading/#:~:text=Fewer%20than%203%20in%2010,Find%20out%20more.",
+    "bodyText": "During the first spring lockdown, children and young people's enjoyment of reading increased from 47.8% pre-lockdown to 55.9% post-lockdown"
+  },
+  "f": {
+    "details": "Fewer",
+    "url": "https://www.savethechildren.org/us/charity-stories/child-literacy-statistics-for-parents",
+    "bodyText": "By the time they’re 3 years old, children from low-income families have been exposed to 30 million fewer words than their more affluent counterparts"
+  },
+  "g": {
+    "details": "Gap in literacy",
+    "url": "https://beyondbasics.org/about/literacy-gap#:~:text=Any%20student%20more%20than%20one,to%20achieve%20grade%20level%20reading.",
+    "bodyText": "Any student more than one grade level behind falls into “the literacy gap”. For those in the gap, the educational model does not include the intensive help they need to achieve grade level reading."
+  },
+  "h": {
+    "details": "Human right",
+    "url": "https://lukukeskus.fi/en/10-facts-about-global-literacy/",
+    "bodyText": "The United Nations defines literacy as a human right"
+  },
+  "i": {
+    "details": "Illiteracy",
+    "url": "https://lukukeskus.fi/en/10-facts-about-global-literacy/",
+    "bodyText": "1 in 7 adults around the world are illiterate"
+  },
+  "j": {
+    "details": "Journal",
+    "url": "https://literacytrust.org.uk/research-services/research-reports/children-and-young-peoples-diary-writing-in-2022/",
+    "bodyText": "7 in 10 (69.2%) children and young people who write in a diary write because it helps them feel creative, with 2 in 3 (64.2%) also saying that they write to express their thoughts and feelings and their ideas and imagination."
+  },
+  "k": {
+    "details": "Kindergarten",
+    "url": "https://literacyproj.org/2019/02/14/30-key-child-literacy-stats-parents-need-to-be-aware-of/",
+    "bodyText": "37% of children arrive at kindergarten without the skills necessary for lifetime learning."
+  },
+  "l": {
+    "details": "Language",
+    "url": "https://comfyliving.net/reading-statistics/",
+    "bodyText": "Research by the American Academy of Pediatrics examined the link between brain activity in young children and home reading exposure. They found a strong association between children being read to and activation in areas involved in language development. "
+  },
+  "m": {
+    "details": "Millions",
+    "url": "https://comfyliving.net/reading-statistics/",
+    "bodyText": "Children who read at least 20 minutes a day are exposed to almost 2 million words per year.  "
+  },
+  "n": {
+    "details": "National Literacy Trust",
+    "url": "https://literacytrust.org.uk/communities/manchester/",
+    "bodyText": "National Literacy Trust is an independent UK charity dedicated to giving disadvantaged children the literacy skills they need to succeed. Join us in supporting them."
+  },
+  "o": {
+    "details": "One",
+    "url": "https://comfyliving.net/reading-statistics/",
+    "bodyText": "86% of people with an annual household income of $75,000 a year read at least one book every year."
+  },
+  "p": {
+    "details": "Poetry",
+    "url": "https://literacytrust.org.uk/research-services/research-reports/children-and-young-peoples-engagement-with-poetry-in-2022/",
+    "bodyText": "Most poetry readers were motivated to read poetry to learn new words (67.6%), new things (65.8%) or about other people and cultures (51.8%)."
+  },
+  "q": {
+    "details": "Quatrain",
+    "url": "https://literacytrust.org.uk/research-services/research-reports/children-and-young-peoples-engagement-with-poetry-in-2022/",
+    "bodyText": "1 in 2 (50.9%) children and young people who read poetry in their free time write poetry in their free time, compared with just 7.1% of children who don’t read poetry."
+  },
+  "r": {
+    "details": "Reading Team",
+    "url": "https://greatnonprofits.org/org/reading-team-inc",
+    "bodyText": "The foundation is dedicated to enabling young children who at high risk of reading failure to become strong and enthusiastic readers, writers, listeners, and speakers and to develop the skills, habits, and behaviors that will support their success in school and in life. The children typically gain more than 50 percentiles in reading ability during their year in the program and finish the year above the 80th percentile in reading ability."
+  },
+  "s": {
+    "details": "September",
+    "url": "https://www.unesco.org/en/days/literacy",
+    "bodyText": "September 8th is International Literacy Day #LiteracyDay"
+  },
+  "t": {
+    "details": "Technology",
+    "url": "https://en.unesco.org/sites/default/files/ild-2021-fact-sheet.pdf",
+    "bodyText": "826 million students (50 per cent) kept out of classrooms by the pandemic do not have access to a computer at home, according to a recent study by the UNESCO Institute of Statistics (UIS) and the Teacher Task Force12. Such contexts challenge the total shift towards digital and online learning for many children and youth. "
+  },
+  "u": {
+    "details": "UK",
+    "url": "https://literacytrust.org.uk/research-services/research-reports/gift-reading-childrens-book-ownership-2019/",
+    "bodyText": "383,755 children and young people in the UK don't have a book of their own "
+  },
+  "v": {
+    "details": "Voice",
+    "url": "https://literacytrust.org.uk/research-services/research-reports/the-role-of-audiobooks-to-engage-reluctant-readers-and-underrepresented-children-and-young-people/",
+    "bodyText": "Of those who listen to audiobooks, 2 in 5 (44.5%) children and young people said that listening to an audiobook or podcast has got them interested in reading books."
+  },
+  "w": {
+    "details": "Wellbeing",
+    "url": "https://literacytrust.org.uk/research-services/research-reports/the-role-of-audiobooks-to-engage-reluctant-readers-and-underrepresented-children-and-young-people/",
+    "bodyText": "Comments from children and young people suggest that listening to audiobooks and/or podcasts can help them relax and ease anxiety"
+  },
+  "x": {
+    "details": "Xmas",
+    "url": "https://www.dictionary.com/browse/xmas",
+    "bodyText": "Where did 'Xmas' come from? The history of the word Xmas is actually more respectable—and fascinating—than you might suspect. First of all, the abbreviation predates (by centuries) its use in gaudy advertisements. It was first used in the mid-1500s. X represents the Greek letter chi, the initial letter in the word Χριστός (Chrīstos). And what does Χριστός mean? “(Jesus) Christ.” X has been an acceptable representation of the word Christ for hundreds of years. (And why would people need to abbreviate Christ? Well, the word is very widely written.)"
+  },
+  "y": {
+    "details": "Yes",
+    "url": "https://literacytrust.org.uk/research-services/research-reports/book-ownership-in-2022/",
+    "bodyText": "In 2022, 93.5% children and young people aged 8 to 18 said that they have a book of their own at home, meaning 1 in 15 (6.5%) do not."
+  },
+  "z": {
+    "details": "Zoom teaching",
+    "url": "https://www.readabilitytutor.com/how-can-you-use-zoom-to-teach-reading-lessons/",
+    "bodyText": "Remote teaching via Zoom is being used to teach reading remotely"
+  }
 }
