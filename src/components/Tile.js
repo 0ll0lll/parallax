@@ -66,7 +66,7 @@ const Tile = ({ isGameOn, setCrop, letter, index, setActiveLetter, activeLetter 
             <TileCard setActiveLetter={setActiveLetter} id={ids[index]} letter={letter} />
           )}
           {activeLetter !== letter && (
-            <div className={`relative ${activeLetter && activeLetter !== letter ? 'opacity-50' : ''}`}>
+            <div className={`relative ${activeLetter && activeLetter !== letter ? 'opacity-30' : ''}`}>
               {svgs[letter]}
               <img src={require(`../assets/letters/${letter}.jpg`)} alt={`letter ${letter}`} />
             </div>

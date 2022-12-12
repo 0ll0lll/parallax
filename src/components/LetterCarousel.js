@@ -101,7 +101,7 @@ const LetterCarousel = ({ children, initialLetter, showDots }) => {
   return (
     <div className="relative w-full h-full white">
       {!showDots && (
-        <div className="absolute z-10 bottom-6 right-10">
+        <div className="absolute z-10 bottom-6 right-4">
           <ArrowLeft />
           <ArrowRight />
         </div>

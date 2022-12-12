@@ -18,7 +18,7 @@ const Header = ({ disableHeader, setShowDonate, setShowAbout, setIsGameOn, isGam
 
   return (
     <header className="relative z-10 flex items-center justify-between h-12 px-6 bg-white drop-shadow-sm">
-      {disableHeader && <div className="absolute left-0 z-10 w-full h-full bg-beige/40" />}
+      {disableHeader && <div className="absolute left-0 z-10 w-full h-full bg-beige/70" />}
       <a href="https://www.steinias.com/" target="_blank" rel="noreferrer">
         <svg width="73.089" height="24" viewBox="0 0 73.089 32">
           <defs>
