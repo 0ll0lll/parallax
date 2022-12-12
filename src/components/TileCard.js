@@ -68,8 +68,9 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
               <div className={`${isMobile ? 'mt-4' : 'py-6 pl-6 md:w-1/2 lg:w-auto lg:h-full'}`}>
                 <img
                   className="w-full h-full"
-                  src={require(`../assets/letters/${tempLetter}.jpg`)}
+                  src={require(`../assets/gifs/${tempLetter}.gif`)}
                   alt={`letter ${tempLetter}`}
+                  loading="lazy"
                 />
               </div>
 
