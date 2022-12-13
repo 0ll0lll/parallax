@@ -2,6 +2,7 @@ import React, { useRef, useState, useMemo, useEffect } from 'react';
 import { useGesture } from 'react-use-gesture';
 import '../styles/map.css';
 import Tile from './Tile';
+import star from '../assets/star.svg';
 
 const Map = ({ isGameOn, setDisableHeader }) => {
   const letters = [
@@ -39,12 +40,22 @@ const Map = ({ isGameOn, setDisableHeader }) => {
   const [transition, setTransition] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  const [showHint, setShowHint] = useState(false);
+
   const [activeLetter, setActiveLetter] = useState(null);
 
   useEffect(() => {
     if (window.innerWidth < 768) {
       setIsMobile(true);
       setCrop({ x: -mapRef.current.clientWidth / 2 + 200, y: -mapRef.current.clientHeight / 2 + 300 });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (localStorage.getItem('hideHint')) {
+      setShowHint(false);
+    } else {
+      setShowHint(true);
     }
   }, []);
 
@@ -101,6 +112,46 @@ const Map = ({ isGameOn, setDisableHeader }) => {
 
   return (
     <div ref={mapContainerRef} className="relative z-10 h-full overflow-hidden">
+      {showHint && (
+        <div className="fixed top-0 z-50 w-full h-full bg-beige/70">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center w-5/6 justify-center p-10 text-center bg-white rounded-md md:w-[36rem] drop-shadow-md">
+            <button
+              onClick={() => {
+                localStorage.setItem('hideHint', true);
+                setShowHint(false);
+              }}
+              aria-label="close button"
+              type="button"
+              className="absolute z-20 rounded-full top-4 right-4"
+            >
+              <svg
+                className="stroke-black hover:stroke-white fill-white hover:fill-[black]"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+              >
+                <g transform="translate(0.053 0.003)">
+                  <g transform="translate(-0.053 -0.003)" fill="fill-current" stroke="black" strokeWidth="1">
+                    <circle cx="15" cy="15" r="15" stroke="none" />
+                    <circle cx="15" cy="15" r="14.5" fill="none" />
+                  </g>
+                  <g transform="translate(8.569 8.779)">
+                    <line x1="12.756" y1="12.437" fill="none" stroke="stroke-current" strokeWidth="1" />
+                    <line y1="12.437" x2="12.756" fill="none" stroke="stroke-current" strokeWidth="1" />
+                  </g>
+                </g>
+              </svg>
+            </button>
+            <img className="mx-auto" src={star} alt="star" />
+            <span className="block my-6 text-3xl font-bold">Hint!</span>
+            <p>
+              Move your pointer around the screen to find and click on every letter. Each contains an interesting
+              literacy fact.
+            </p>
+          </div>
+        </div>
+      )}
+
       <div
         ref={mapRef}
         id="map"

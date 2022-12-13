@@ -22,8 +22,8 @@ const Header = ({ disableHeader, setShowDonate, setShowAbout, setIsGameOn, isGam
   return (
     <header
       className={`${
-        isHome ? 'fixed' : 'relative'
-      } z-50 flex items-center justify-between w-full h-12 px-6 bg-white drop-shadow-sm`}
+        isHome ? 'fixed z-50' : 'relative z-10'
+      }  flex items-center justify-between w-full h-12 px-6 bg-white drop-shadow-sm`}
     >
       {disableHeader && <div className="absolute left-0 z-10 w-full h-full bg-beige/70" />}
       <a href="https://www.steinias.com/" target="_blank" rel="noreferrer">
