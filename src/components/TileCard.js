@@ -65,22 +65,27 @@ const TileCard = ({ isMobile, setActiveLetter, id, letter }) => {
             <div className={`h-full ${isMobile ? 'px-4' : 'flex'}`}>
               {isMobile && <span className="inline-block mt-4">{index + 1}/26</span>}
 
-              <div className={`${isMobile ? 'mt-4' : 'py-6 pl-6 md:w-1/2 lg:w-auto lg:h-full'}`}>
+              <div className={`relative ${isMobile ? 'mt-4' : 'py-6 pl-6 md:w-1/2 lg:w-auto lg:h-full min-w-1/2'}`}>
                 <img
-                  className="w-full h-full"
+                  className="w-full h-full opacity-40"
+                  src={require(`../assets/placeholder.jpg`)}
+                  alt="placeholder"
+                />
+                <img
+                  className="absolute top-0 w-full h-full md:py-6 md:pr-6"
                   src={require(`../assets/gifs/${tempLetter}.gif`)}
                   alt={`letter ${tempLetter}`}
                   loading="lazy"
                 />
               </div>
 
-              <div className={`overflow-y-scroll ${isMobile ? '' : 'flex-1 mt-16'} `}>
+              <div className={`overflow-y-scroll ${isMobile ? '' : 'flex-1 my-auto'}`}>
                 <div className={`${isMobile ? 'text-sm' : 'px-16 py-10'}`}>
                   {!isMobile && <span className="text-sm">{index + 1}/26</span>}
-                  <h1 className={`font-bold ${isMobile ? 'text-xl mt-4 mb-2' : 'text-4xl my-6'}`}>
+                  <h1 className={`font-bold ${isMobile ? 'text-xl mt-4 mb-2' : 'text-3xl my-6'}`}>
                     <span className="uppercase">{tempLetter}</span> is for {letters[tempLetter].details}
                   </h1>
-                  <p>{letters[tempLetter].bodyText}</p>
+                  <p className="text-sm">{letters[tempLetter].bodyText}</p>
                   <a
                     target="_blank"
                     href={letters[tempLetter].url ? letters[tempLetter].url : null}
