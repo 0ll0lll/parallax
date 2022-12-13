@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Modal = ({ children, setShowAbout, setShowDonate }) => (
-  <div className="fixed z-50 flex items-center justify-center w-full h-full p-4 py-16 bg-beige/70">
-    <div className="w-full h-full max-w-5xl bg-white rounded-md min-h-[30rem] md:w-3/4 md:h-4/5 drop-shadow-lg p-6 pr-0">
+  <div className="fixed top-0 z-50 flex items-center justify-center w-full h-full p-4 py-16 bg-beige/70">
+    <div className="relative w-full h-full max-w-5xl bg-white rounded-md min-h-[30rem] md:w-3/4 md:h-4/5 drop-shadow-lg p-6 pr-0">
       <button
         onClick={() => {
           if (setShowAbout) setShowAbout(false);

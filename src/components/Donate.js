@@ -3,7 +3,7 @@ import Modal from './Modal';
 
 const Donate = ({ setShowDonate }) => (
   <Modal setShowDonate={setShowDonate}>
-    <div className="w-full pr-6">
+    <div className="w-full py-6 pr-6 md:pl-10 md:pr-16">
       <h1 className="mb-10 text-4xl font-bold">Donate to a charity</h1>
       <div className="items-start gap-16 pb-10 lg:flex">
         <div className="lg:w-1/2">

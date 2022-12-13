@@ -36,11 +36,11 @@ code {
   }
 }
 
-#intro {
+/* #intro {
   animation: fadeout 0.2s ease-out 2.8s forwards;
-}
+} */
 
-@keyframes fadeout {
+/* @keyframes fadeout {
   from {
     opacity: 1;
   }
@@ -63,4 +63,4 @@ main {
   to {
     opacity: 1;
   }
-}
+} */

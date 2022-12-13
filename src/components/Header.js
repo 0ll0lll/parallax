@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
+import { useHref, Link } from 'react-router-dom';
 import Game from './Game';
 import icons from '../data/icons';
 import Dropdown from './Dropdown';
@@ -10,6 +11,8 @@ const Header = ({ disableHeader, setShowDonate, setShowAbout, setIsGameOn, isGam
   const [showMenu, setShowMenu] = useState(false);
   const [isMobile, setIsMobile] = useState();
 
+  const isHome = useHref() === '/';
+
   useEffect(() => {
     if (window.innerWidth < 768) {
       setIsMobile(true);
@@ -17,7 +20,11 @@ const Header = ({ disableHeader, setShowDonate, setShowAbout, setIsGameOn, isGam
   }, []);
 
   return (
-    <header className="relative z-10 flex items-center justify-between h-12 px-6 bg-white drop-shadow-sm">
+    <header
+      className={`${
+        isHome ? 'fixed' : 'relative'
+      } z-50 flex items-center justify-between w-full h-12 px-6 bg-white drop-shadow-sm`}
+    >
       {disableHeader && <div className="absolute left-0 z-10 w-full h-full bg-beige/70" />}
       <a href="https://www.steinias.com/" target="_blank" rel="noreferrer">
         <svg width="73.089" height="24" viewBox="0 0 73.089 32">
@@ -69,13 +76,24 @@ const Header = ({ disableHeader, setShowDonate, setShowAbout, setIsGameOn, isGam
 
       {!isMobile && (
         <div className="flex items-center gap-6">
-          <button
-            onClick={() => setShowAbout(true)}
-            type="button"
-            className="px-5 py-1 text-sm border-[1px] border-black rounded-full hover:bg-black hover:text-white"
-          >
-            About
-          </button>
+          {!isHome && (
+            <Link
+              className="px-5 py-1 text-sm border-[1px] border-black rounded-full hover:bg-black hover:text-white"
+              to="/"
+            >
+              Home
+            </Link>
+          )}
+
+          {isHome && (
+            <button
+              onClick={() => document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })}
+              type="button"
+              className="px-5 py-1 text-sm border-[1px] border-black rounded-full hover:bg-black hover:text-white"
+            >
+              About
+            </button>
+          )}
 
           <button
             type="button"
@@ -174,13 +192,25 @@ const Header = ({ disableHeader, setShowDonate, setShowAbout, setIsGameOn, isGam
             </div>
           </div>
 
-          <button
-            onClick={() => setShowDonate(true)}
-            type="button"
-            className="px-5 py-1 text-sm text-white border-[1px] border-blue rounded-full bg-blue hover:bg-blue/90"
-          >
-            Donate ✨
-          </button>
+          {isHome && (
+            <button
+              onClick={() => document.querySelector('#donate').scrollIntoView({ behavior: 'smooth', block: 'start' })}
+              type="button"
+              className="px-5 py-1 text-sm text-white border-[1px] border-blue rounded-full bg-blue hover:bg-blue/90"
+            >
+              Donate ✨
+            </button>
+          )}
+
+          {!isHome && (
+            <button
+              onClick={() => setShowDonate(true)}
+              type="button"
+              className="px-5 py-1 text-sm text-white border-[1px] border-blue rounded-full bg-blue hover:bg-blue/90"
+            >
+              Donate ✨
+            </button>
+          )}
 
           {/* <label className="relative inline-flex items-center cursor-pointer">
             <input onChange={(e) => setIsGameOn(e.target.checked)} type="checkbox" value="" className="sr-only peer" />
